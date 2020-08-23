@@ -1,0 +1,76 @@
+
+html {
+    font-family: 'Nunito';
+}
+body {
+    background-color: #1A181B;
+    color: white;
+}
+.boards {
+    display: flex;
+    margin-top: 25px;
+}
+.board {
+    background-color: #564D65;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid #2cda9db4 ;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+h3 {
+    padding: 16px;
+    margin: 0px;
+    color: #05F140;
+}
+
+.dropzone {
+    padding: 16px;
+    min-width: 282px;
+    min-height: 200px;
+}
+
+.card {  
+    padding: 16px;
+    background: #3E8989;
+    box-shadow: 0px 2px 2px -1px #05f140a4;
+    width: 250px;
+    margin: 25px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+.status {
+    width: 30px;
+    background-color: tomato;
+    height: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.status.html {
+    background-color: #F75590;
+}
+.status.js {
+    background-color: #FBD87F;
+}
+.status.mongo {
+    background-color: #10FFCB;
+}
+
+.highlight {
+    background-color: #7b6b96bb;
+}
+/*trasition da cor dos card para todos*/
+.card, .dropzone {
+    transition: all 0.4s;
+}
+/*mudar o cursor do mouse quando o evento drag iniciar*/
+.is-dragging {
+    cursor: move;
+    opacity: 0.3;
+}
+.over {
+    background-color: #a1583e5d;
+}

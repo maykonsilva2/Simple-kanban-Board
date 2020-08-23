@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito:ital,wght@0,300;1,400&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js" defer></script><!--defer faz com que os script só seja lido depois que carregar tudo na página--> 
+    <!--.boards>.board>h3+.dropzone>.card>.status+.content
+        forma simplificada de criar os elementos.
+    (>) indica que dentro do elemento vai existir um h3, e o (+) indica que ao lado do h3 vai existir  um elemento
+stoppend : 27:00
+--> 
+
+    <!--Quadro 1-->
+    <div class="boards">                                                <!--Quadros-->
+        <div class="board">
+            <h3>Todo</h3>
+            <div class="dropzone">                                      <!--Dropzone vai conter um cartão-->
+                <div class="card" draggable="true">
+                    <div class="status js"></div>                          <!--Status a Barra-->
+                    <div class="content">JS LIVRO 1hr</div>                         <!--Contéudo-->
+                </div>
+            </div>
+        </div>
+        <!--Quadro 2-->
+        <div class="board">
+            <h3>In progress</h3>
+            <div class="dropzone">                                      
+                <div class="card" draggable="true">
+                    <div class="status html"></div>         
+                    <div class="content">HTML/CSS LIVRO 1hr 20min</div>
+                </div>
+            </div>
+        </div>
+        <!--Quadro 3-->
+        <div class="board">
+            <h3>Done</h3>
+            <div class="dropzone">                                      
+                <div class="card" draggable="true">
+                    <div class="status mongo"></div>         
+                    <div class="content">Web MongoBD 30min</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

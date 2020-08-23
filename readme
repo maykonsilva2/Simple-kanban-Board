@@ -1,0 +1,64 @@
+link: https://www.youtube.com/watch?v=6wn8hpUcEcM&t=185s
+draggable = true -> especifica que o elemento será arrastavél.
+--------------------------------------------------------------------------------------------
+Events:
+dragstart : Quando o objeto está sendo arrastado.
+drag: Enquanto o elemento está sendo arrastado
+dragend: Quando o elemento parar de arrastar.
+dragenter: quando o objeto arrastado entra na zona de drop
+dragover: quando o objeto esta em cima do local de drop
+dragleave: quando o objeto sai do local de onde ele deveria ser solto
+drop: o objeto foi solto.
+
+-------------------------------------------------------------------------------------------
+
+- display-flex: os blocos ficam alinhados um ao lado do outro combinando Define o elemento como um flex container, tornando os seus filhos flex-itens.
+
+- justify-content: space-between; Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.
+
+-color: #fd951fcc; código hexadecimal as duas ultimas posições `cc` e o código alfa
+
+- min-width , min-height, max-height, max-width. define a altura e largura, máxima e minima de um elemento.
+
+--------------------------------------------------------------------------------------------
+Variáveis CSS 
+--------------------------------------------------------------------------------------------
+-Variáveis CSS permite um valor ser guardado em um lugar, então ser referenciado em muitos outros lugares
+- :root {
+    --Nome-da-variavel: cor;
+}
+h1 {
+    background-color: var(--Nome-da-variavel)
+}
+-------------------------------------------------------------------------------------------
+
+//A funcao querySelectorAll() permite que os seletores CSS sejam usados no JavaScript , .card o ponto faz ele procurar todas as classes.
+
+//O método forEach() executará uma função para cada elemento presente em um array.
+
+---------------------------------------------------------------------------------------------
+-class highlight
+-----------------------------------------------------------------------------------------------
+ Quando o card for clicado a area de drozone irá mudar a cor .
+ a classe highlight no css será chamanda no no js para cada droppzones uma classList será chamada adicionando a class css.
+ quando o evento de drag iniciar (dragstart)
+     function dragstart() {
+|----> dropzones.forEach((dropzone) => {return dropzone.classList.add('highlight')})
+     }
+
+Para mudar a cor novamente a class highlight será removida quando o parar o evento drag
+    function  dragend(){
+|----->dropzones.forEach((dropzone)=>{ return dropzone.classList.remove('highReturn')})
+}
+-------> Pesquisar sobre 'ghost image drag and drop api' para aplicar uma trasparencia no card quando ele está sendo arratado.
+
+A class .is-draggind mudar o curso do mouse quando o objeto começa a ser arrastado.
+para remover e usar a mesma lógica da highlight
+
+
+Going further
+
+here some ideas to pratice:
+Shopping cart - drag a product and drop it into the cart
+Organizer - Events, calendars
+Files management - Sorting files or pictures.
